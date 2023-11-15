@@ -26,7 +26,7 @@ char *n_getenv(memb_t *member, const char *c)
  *@member: Struct containing all the needed arguments
  *Return: always 0
  */
-int n_myenv(memb_t *member)
+int in_myenv(memb_t *member)
 {
 	n_print_list_str(member->env);
 	return (0);

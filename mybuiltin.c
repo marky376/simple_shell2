@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * n_myexit - function name
+ * in_myexit - function name
  * @member: argument name
  * Return: always success
  */
-int n_myexit(memb_t *member)
+int in_myexit(memb_t *member)
 {
 	int n_exitcheck;
 
@@ -29,11 +29,11 @@ int n_myexit(memb_t *member)
 }
 
 /**
- * n_mycd - Changes  current directory of the process.
+ * in_mycd - Changes  current directory of the process.
  * @member: Structure member containing potential arguments.
  * Return: Always success.
  */
-int n_mycd(memb_t *member)
+int in_mycd(memb_t *member)
 {
 	char *v, *dir, buffer[1024];
 	int chdir_ret;
@@ -78,11 +78,11 @@ int n_mycd(memb_t *member)
 }
 
 /**
- * n_myhelp - Prints a help message for the shell.
+ * in_myhelp - Prints a help message for the shell.
  * @member: Structure containing potential arguments.
  * Return: Always success.
  */
-int n_myhelp(memb_t *member)
+int in_myhelp(memb_t *member)
 {
 	char **args_arr;
 

@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- *jjmyhistory - function  displays the history list each command on seperate line
+ *jjmyhistory - function  displays the history list
+ *each command on seperate line
  *@member: Struct containg members used in most functions
  *Return: always 0;
  */
@@ -54,7 +55,7 @@ int mark_set_alias(memb_t *memb, char *str)
 }
 
 /**
- *n_unset_alias - delete the alias for a command
+ *bb_unset_alias - delete the alias for a command
  *@memb: Struct containg members used in most functions
  *@str: the string alias
  *Return: always 0 on success else otherwise

@@ -174,9 +174,9 @@ char *n_convert_number(long int, int, int);
 void n_remove_comments(char *);
 
 /************** mybuiltin.c ***************/
-int n_myexit(memb_t *);
-int n_mycd(memb_t *);
-int n_myhelp(memb_t *);
+int in_myexit(memb_t *);
+int in_mycd(memb_t *);
+int in_myhelp(memb_t *);
 
 /************ built1n.c *********/
 int jjmyhistory(memb_t *);
@@ -199,7 +199,7 @@ void n_free_info(memb_t *, int);
 
 /*********** a_environ.c ***************/
 char *n_getenv(memb_t *, const char *);
-int n_myenv(memb_t *);
+int in_myenv(memb_t *);
 int n_mysetenv(memb_t *);
 int n_myunsetenv(memb_t *);
 int n_populate_env_list(memb_t *);
