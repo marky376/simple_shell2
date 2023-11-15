@@ -15,7 +15,7 @@ int in_myexit(memb_t *member)
 		if (n_exitcheck == -1)
 		{
 			member->status = 2;
-			n_print_error(member, "Wrong number: ");
+			n_print_error(member, "Wrong no: ");
 			n_puts(member->argv[1]);
 			n_putchar('\n');
 			return (1);

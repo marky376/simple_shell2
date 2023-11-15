@@ -17,11 +17,11 @@ ssize_t n_input_buf(memb_t *member, char **buf, size_t *len)
 		free(*buf);
 		*buf = NULL;
 		signal(SIGINT, n_sigintHandler);
-#if USE_GETLINE
+
 		r = getline(buf, &len_p, stdin);
-#else
+
 		r = n_getline(member, buf, &len_p);
-#endif
+
 		if (r > 0)
 		{
 			if ((*buf)[r - 1] == '\n')
