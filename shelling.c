@@ -54,11 +54,11 @@ int n_find_builtin(memb_t *member)
 		{"exit", n_myexit},
 		{"env", n_myenv},
 		{"help", n_myhelp},
-		{"history", n_myhistory},
+		{"history", jjmyhistory},
 		{"setenv", n_mysetenv},
 		{"unsetenv", n_myunsetenv},
 		{"cd", n_mycd},
-		{"alias", n_myalias},
+		{"alias", merc_myalias},
 		{NULL, NULL}
 	};
 

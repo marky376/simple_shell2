@@ -1,22 +1,22 @@
 #include "shell.h"
 
 /**
- *n_myhistory - displays the history list each command on seperate line
+ *jjmyhistory - function  displays the history list each command on seperate line
  *@member: Struct containg members used in most functions
  *Return: always 0;
  */
-int n_myhistory(memb_t *member)
+int jjmyhistory(memb_t *member)
 {
 	n_print_list(member->history);
 	return (0);
 }
 
 /**
- *n_print_alias - prints an alias string
+ *m_print_alias - prints an alias string
  *@node: the alias node
  *Return: always 0 on success else otherwise
  */
-int n_print_alias(list_t *node)
+int m_print_alias(list_t *node)
 {
 	char *c = NULL, *s = NULL;
 
@@ -34,12 +34,12 @@ int n_print_alias(list_t *node)
 }
 
 /**
- *n_set_alias - create an alias
+ *mark_set_alias - create an alias
  *@memb: Struct containg members used in most functions
  *@str: a string alias
  *Return: always 0 on success else otherwise
  */
-int n_set_alias(memb_t *memb, char *str)
+int mark_set_alias(memb_t *memb, char *str)
 {
 	char *p;
 
@@ -47,9 +47,9 @@ int n_set_alias(memb_t *memb, char *str)
 	if (!p)
 		return (1);
 	if (!*++p)
-		return (n_unset_alias(memb, str));
+		return (bb_unset_alias(memb, str));
 
-	n_unset_alias(memb, str);
+	bb_unset_alias(memb, str);
 	return (n_add_node_end(&(memb->alias), str, 0) == NULL);
 }
 
@@ -59,7 +59,7 @@ int n_set_alias(memb_t *memb, char *str)
  *@str: the string alias
  *Return: always 0 on success else otherwise
  */
-int n_unset_alias(memb_t *memb, char *str)
+int bb_unset_alias(memb_t *memb, char *str)
 {
 	char *p, c;
 	int ret;
@@ -76,11 +76,11 @@ int n_unset_alias(memb_t *memb, char *str)
 }
 
 /**
- *n_myalias - mimics the alias builtin alias command
+ *merc_myalias -  function mimics the alias builtin alias command
  *@member: Struct containg members used in most functions
  *Return: always 0
  */
-int n_myalias(memb_t *member)
+int merc_myalias(memb_t *member)
 {
 	int i = 0;
 	char *p = NULL;
@@ -91,7 +91,7 @@ int n_myalias(memb_t *member)
 		node = member->alias;
 		while (node)
 		{
-			n_print_alias(node);
+			m_print_alias(node);
 			node = node->next;
 		}
 		return (0);
@@ -100,9 +100,9 @@ int n_myalias(memb_t *member)
 	{
 		p = n_strchr(member->argv[i], '=');
 		if (p)
-			n_set_alias(member, member->argv[i]);
+			mark_set_alias(member, member->argv[i]);
 		else
-			n_print_alias(n_node_starts_with(member->alias, member->argv[i], '='));
+			m_print_alias(n_node_starts_with(member->alias, member->argv[i], '='));
 	}
 
 	return (0);

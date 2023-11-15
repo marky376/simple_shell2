@@ -173,17 +173,17 @@ int n_print_d(int, int);
 char *n_convert_number(long int, int, int);
 void n_remove_comments(char *);
 
-/************** a_builtin.c ***************/
+/************** mybuiltin.c ***************/
 int n_myexit(memb_t *);
 int n_mycd(memb_t *);
 int n_myhelp(memb_t *);
 
-/************ a_builtin1.c *********/
-int n_myhistory(memb_t *);
-int n_set_alias(memb_t *, char *);
-int n_unset_alias(memb_t *, char *);
-int n_print_alias(list_t *);
-int n_myalias(memb_t *);
+/************ built1n.c *********/
+int jjmyhistory(memb_t *);
+int mark_set_alias(memb_t *, char *);
+int bb_unset_alias(memb_t *, char *);
+int m_print_alias(list_t *);
+int merc_myalias(memb_t *);
 
 /*********** a_getline.c **********/
 ssize_t n_get_input(memb_t *);
@@ -204,7 +204,7 @@ int n_mysetenv(memb_t *);
 int n_myunsetenv(memb_t *);
 int n_populate_env_list(memb_t *);
 
-/************* a_getenv.c ************/
+/************* myenv.c ************/
 char **n_get_environ(memb_t *);
 int n_unsetenv(memb_t *, char *);
 int n_setenv(memb_t *, char *, char *);
