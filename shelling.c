@@ -51,13 +51,13 @@ int n_find_builtin(memb_t *member)
 {
 	int i, built_in_ret = -1;
 	builtin_table builtintbl[] = {
-		{"exit", in_myexit},
+		{"exit", n_myexit},
 		{"env", in_myenv},
-		{"help", in_myhelp},
+		{"help", n_myhelp},
 		{"history", jjmyhistory},
 		{"setenv", n_mysetenv},
 		{"unsetenv", n_myunsetenv},
-		{"cd", in_mycd},
+		{"cd", n_mycd},
 		{"alias", merc_myalias},
 		{NULL, NULL}
 	};

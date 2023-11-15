@@ -174,9 +174,9 @@ char *n_convert_number(long int, int, int);
 void n_remove_comments(char *);
 
 /************** mybuiltin.c ***************/
-int in_myexit(memb_t *);
-int in_mycd(memb_t *);
-int in_myhelp(memb_t *);
+int n_myexit(memb_t *);
+int n_mycd(memb_t *);
+int n_myhelp(memb_t *);
 
 /************ built1n.c *********/
 int jjmyhistory(memb_t *);
